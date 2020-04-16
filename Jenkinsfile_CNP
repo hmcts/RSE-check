@@ -1,0 +1,29 @@
+#!groovy
+properties(
+    [
+        [
+            $class       : 'GithubProjectProperty',
+            projectUrlStr: 'https://github.com/hmcts/RSE-check'
+        ],
+        pipelineTriggers([[$class: 'GitHubPushTrigger']])
+    ]
+)
+
+@Library("Infrastructure")
+
+def type = "java"
+def product = "ccd"
+def component = "rse-check"
+
+
+withPipeline(type, product, component) {
+    onMaster {
+        enableSlackNotifications('#reform-swe-builds')
+    }
+    onDemo {
+        enableSlackNotifications('#reform-swe-builds')
+    }
+    onPR {
+        enableSlackNotifications('#reform-swe-builds')
+    }
+}
