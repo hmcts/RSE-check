@@ -3,7 +3,7 @@ properties(
     [
         [
             $class       : 'GithubProjectProperty',
-            projectUrlStr: 'https://github.com/hmcts/RSE-check'
+            projectUrlStr: 'https://github.com/hmcts/rse-check'
         ],
         pipelineTriggers([[$class: 'GitHubPushTrigger']])
     ]
