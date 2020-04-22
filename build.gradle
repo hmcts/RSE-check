@@ -110,6 +110,8 @@ jacocoTestReport {
 
 project.tasks['sonarqube'].dependsOn jacocoTestReport
 
+check.dependsOn(integration)
+
 sonarqube {
   properties {
     property "sonar.projectName", "Reform :: rse-check"
