@@ -17,6 +17,9 @@ def component = "check"
 
 
 withPipeline(type, product, component) {
+
+    disableLegacyDeployment()
+
     onMaster {
         enableSlackNotifications('#reform-swe-builds')
     }
