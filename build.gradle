@@ -147,7 +147,7 @@ dependencyCheck {
 
 dependencyManagement {
   dependencies {
-    dependency group: 'org.bouncycastle', name: 'bcpkix-jdk15on', version: '1.64'
+    dependency group: 'org.bouncycastle', name: 'bcpkix-jdk15on', version: '1.65'
     // CVE-2020-9488
     dependency('org.springframework.boot:spring-boot-starter-logging:2.2.6.RELEASE') {
       exclude 'org.apache.logging.log4j:log4j-to-slf4j'
