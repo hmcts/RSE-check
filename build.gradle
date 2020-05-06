@@ -148,6 +148,10 @@ dependencyCheck {
 dependencyManagement {
   dependencies {
     dependency group: 'org.bouncycastle', name: 'bcpkix-jdk15on', version: '1.64'
+    // CVE-2020-9488
+    dependency('org.springframework.boot:spring-boot-starter-logging:2.2.6.RELEASE') {
+      exclude 'org.apache.logging.log4j:log4j-to-slf4j'
+    }
     // CVE-2018-10237 - Unbounded memory allocation
     dependencySet(group: 'com.google.guava', version: '28.2-jre') {
       entry 'guava'
@@ -181,7 +185,6 @@ ext.libraries = [
 
 dependencies {
   implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
-  implementation group: 'org.apache.logging.log4j', name: 'log4j-to-slf4j', version: '2.13.2'
   implementation group: 'org.springframework.boot', name: 'spring-boot-starter-actuator'
   implementation group: 'org.springframework.boot', name: 'spring-boot-starter-aop'
   implementation group: 'org.springframework.boot', name: 'spring-boot-starter-json'
