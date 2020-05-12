@@ -43,12 +43,12 @@ by executing the following command:
 ```
 
 This will start the API container exposing the application's port
-(set to `8088` in this template app).
+(set to `4550` in this template app).
 
 In order to test if the application is up, you can call its health endpoint:
 
 ```bash
-  curl http://localhost:8088/health
+  curl http://localhost:4550/health
 ```
 
 You should get a response similar to this:
