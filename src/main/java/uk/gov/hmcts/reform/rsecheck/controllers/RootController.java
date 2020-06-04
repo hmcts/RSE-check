@@ -23,6 +23,7 @@ public class RootController {
      */
     @GetMapping("/")
     public ResponseEntity<String> welcome() {
+        String boom;
         return ok("Welcome to RSE-check");
     }
 }
