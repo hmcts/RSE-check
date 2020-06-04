@@ -17,7 +17,6 @@ def component = "check"
 
 
 withPipeline(type, product, component) {
-    installCharts()
     disableLegacyDeployment()
 
     onMaster {
