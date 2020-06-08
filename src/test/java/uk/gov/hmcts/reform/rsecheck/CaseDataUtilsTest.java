@@ -22,6 +22,15 @@ public class CaseDataUtilsTest {
     public void notAssertion() {
         String ranValuated = Double.toString(Math.random());
         Boolean  valuatedRes = ranValuated.contains("1234");
+        checkValuated(ranValuated);
+    }
+
+    Boolean checkValuated(String valuated){
+        return null;
+    }
+
+    boolean soManyParam(int p1,int p2, int p3, int p4, String p5, String p6, String p7, String p8, int p9){
+        return false;
     }
 
 }
