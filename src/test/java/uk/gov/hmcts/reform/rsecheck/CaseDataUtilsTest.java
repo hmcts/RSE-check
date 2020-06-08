@@ -18,7 +18,9 @@ public class CaseDataUtilsTest {
         assertThat("Toto should be be an issue");
     }
 
-
-
+    @Test
+    public void notAssertion() {
+        String useMe = Math.random()+"";
+    }
 
 }
