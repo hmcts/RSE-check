@@ -20,7 +20,8 @@ public class CaseDataUtilsTest {
 
     @Test
     public void notAssertion() {
-        String useMe = Math.random()+"";
+        String ranValuated = Double.toString(Math.random());
+        Boolean  valuatedRes = ranValuated.contains("1234");
     }
 
 }
