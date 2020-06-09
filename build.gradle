@@ -108,19 +108,9 @@ jacocoTestReport {
   }
 }
 
-jacocoTestCoverageVerification {
-  violationRules {
-    rule {
-      limit {
-        minimum = 0.7
-      }
-    }
-  }
-}
-
 project.tasks['sonarqube'].dependsOn jacocoTestReport
 
-check.dependsOn(integration, jacocoTestCoverageVerification)
+check.dependsOn(integration)
 
 sonarqube {
   properties {
