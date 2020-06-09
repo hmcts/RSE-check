@@ -1,5 +1,6 @@
 package uk.gov.hmcts.reform.rsecheck.controllers;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,7 @@ public class GetWelcomeTest {
     @Autowired
     private transient MockMvc mockMvc;
 
+    @Disabled
     @DisplayName("Should welcome upon root request with 200 response code")
     @Test
     public void welcomeRootEndpoint() throws Exception {
