@@ -9,4 +9,12 @@ public class UseLessStuff {
         return prefix.concat(NAME);
     }
 
+    public Boolean checkName(String prefix){
+        return prefix.contains(prefix);
+    }
+
+    public String noName(String prefix){
+        return "NoName";
+    }
+
 }
