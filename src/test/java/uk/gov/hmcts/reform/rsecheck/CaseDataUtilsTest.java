@@ -18,7 +18,4 @@ public class CaseDataUtilsTest {
         assertThat("Toto should be be an issue");
     }
 
-
-
-
 }
